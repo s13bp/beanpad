@@ -16,7 +16,7 @@
         .boxes{
             
             width: 250px;
-            background-color: rgb(44, 44, 44);
+            background-color: #1c222e;
             margin:2px 15px;
             cursor: pointer; 
             transition: all 1s;  /* lets make it smooth */
@@ -25,28 +25,29 @@
             justify-content: center;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 18px;
-            color: white;
+            color: rgb(255, 255, 255);
             padding: 10px;
         }
 
         .change-bgcolor:hover{
-            background-color: crimson;
+            background-color: #ffcb0d;
             transition: all 1s;
         }
 
         .change-font-color:hover{
             transition: all 1s;
-            color:blue;
+            color:rgb(0, 0, 0);
         }
 
         .move-right:hover{
-            background-color: crimson;
+            background-color:#FFDB58;
             transition: all .5s;
             transform : translateX(10px);
+         
         }
 
         .move-left:hover{
-            background-color: crimson;
+            background-color: #FFDB58;
             transition: all .5s;
             transform : translateX(-10px);
         }
@@ -57,7 +58,7 @@
         }
 
         .move-down:hover{
-            background-color: crimson;
+            background-color: #FFDB58;
             transition: all .5s;
             transform : translateY(10px);
         }
@@ -230,11 +231,11 @@
             <nav class="menu open-current-submenu ">
               <ul>
                 <li class="menu-item ">
-                  <a href="#" class="boxes move-right">
+                  <a href="#" class="boxes  move-right">
                     <span class="menu-icon">
                       <i class="ri-home-3-fill"></i>
                     </span>
-                    <span class="menu-title">Home</span>
+                    <span class="menu-title ">Home</span>
                   </a>
                 </li>
                 <li class="menu-item sub-menu ">
@@ -248,28 +249,28 @@
                   <div class="sub-menu-list">
                     <ul>
                       <li class="menu-item">
-                        <a href="#">
+                        <a href="#" class=" boxes move-left">
                           <span class="menu-title">Create Launch Pad</span>
                         </a>
                       </li>
                       <li class="menu-item">
-                        <a href="#">
+                        <a href="#" class=" boxes move-left">
                           <span class="menu-title">Create Fair Launch</span>
                         </a>
                       </li>
                       <li class="menu-item ">
-                        <a href="#">
+                        <a href="#" class=" boxes move-left">
                           <span class="menu-title">Create Token</span>
                         </a>
                       </li>
                       <li class="menu-item sub-menu">
-                        <a href="#">
+                        <a href="#" class=" boxes move-left">
                           <span class="menu-title">Launch Pad List</span>
                         </a>
                         <div class="sub-menu-list">
                           <ul>
                             <li class="menu-item">
-                              <a href="#">
+                              <a href="#" class=" boxes move-left">
                                 <span class="menu-title">View Pool</span>
                               </a>
                             </li>
@@ -299,18 +300,18 @@
                   <div class="sub-menu-list">
                     <ul>
                       <li class="menu-item">
-                        <a href="#">
+                        <a href="#" class=" boxes move-left">
                           <span class="menu-title">Create Lock</span>
                         </a>
                       </li>
                       <li class="menu-item sub-menu">
-                        <a href="#">
+                        <a href="#" class=" boxes move-left">
                           <span class="menu-title ">Token</span>
                         </a>
                         <div class="sub-menu-list">
                           <ul>
                             <li class="menu-item">
-                              <a href="#">
+                              <a href="#" class=" boxes move-left">
                                 <span class="menu-title">Lock info</span>
                               </a>
                             </li>
@@ -319,13 +320,13 @@
                         </div>
                       </li>
                       <li class="menu-item sub-menu">
-                        <a href="#">
+                        <a href="#" class=" boxes move-left">
                           <span class="menu-title ">Liquidity</span>
                         </a>
                         <div class="sub-menu-list">
                           <ul>
                             <li class="menu-item">
-                              <a href="#">
+                              <a href="#" class=" boxes move-left">
                                 <span class="menu-title">Liquidity lock info</span>
                               </a>
                             </li>
@@ -394,25 +395,39 @@
       </aside>
       <div id="overlay" class="overlay"></div>
       <div class="layout">
-        <header class="header" style="background-color: rgb(39, 39, 39);">
+        <header class="header" style="background-color: #1c222e;">
           <a id="btn-collapse" href="#">
-            <i class="ri-menu-line ri-xl"></i>
+            <div id="hamburger" onclick="this.classList.toggle('open');">
+              <svg width="70" height="50" viewBox="0 0 100 100">
+                <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                <path class="line line2" d="M 20,50 H 80" />
+                <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+              </svg>
+            </div>
           </a>
           <a id="btn-toggle" href="#" class="sidebar-toggler break-point-lg">
-            <i class="ri-menu-line ri-xl"></i>
+            <div id="hamburger" onclick="this.classList.toggle('open');">
+              <svg width="70" height="50" viewBox="0 0 100 100">
+                <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                <path class="line line2" d="M 20,50 H 80" />
+                <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+              </svg>
+            </div>
           </a>
           <button style="margin-left: auto;;">CONNECT</button>
         
         </header>
-        <main class="content" style="background-color: rgb(56, 56, 56); color: white;">
+        <main class="content" style="background-color:#242d3c; color: #f5f5f5;">
           <div class="container-sm center-xs" style="padding-top: 200px;">
             <h1 >
-              The Launchpad Protocol for Everyone!
+              A Launchpad with ZERO Token Supply Fee Options for DeFi. 
 
             </h1>
-            <p  >
-              PinkSale helps everyone to create their own tokens and token sales in few seconds. Tokens created on PinkSale will be verified and published on explorer websites.
+            <p >
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, aperiam. Natus molestiae fuga ipsam ipsum. Doloremque dolorem corporis velit excepturi, necessitatibus recusandae rem facere at iste pariatur dicta totam sequi?
             </p>
+ 
+           
 
 
           </div>

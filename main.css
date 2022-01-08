@@ -400,7 +400,7 @@
   color: #b3b8d4;
   overflow-x: hidden !important;
   position: relative;
-  background-color: #2c2c2c;
+  background-color: #1c222e;
 }
 .sidebar .image-wrapper {
   position: absolute;
@@ -519,13 +519,13 @@
   transition: opacity 0.3s;
 }
 .layout .sidebar .menu .menu-item a:hover .menu-title {
-  color: #dee2ec;
+  color: black;
 }
 .layout .sidebar .menu .menu-item a:hover .menu-icon {
-  color: #dee2ec;
+  color: black;
 }
 .layout .sidebar .menu .menu-item a:hover .menu-icon i {
-  animation: swing ease-in-out 0.5s 1 alternate;
+  animation: swing ease-in-out 1s 1 alternate;
 }
 .layout .sidebar .menu .menu-item a:hover::after {
   border-color: #dee2ec !important;
@@ -561,10 +561,10 @@
   color: #dee2ec;
 }
 .layout .sidebar .menu > ul > .sub-menu > .sub-menu-list {
-  background-color: #2c2c2c;
+  background-color: #1c222e;
 }
 .layout .sidebar .menu.icon-shape-circle .menu-item a .menu-icon, .layout .sidebar .menu.icon-shape-rounded .menu-item a .menu-icon, .layout .sidebar .menu.icon-shape-square .menu-item a .menu-icon {
-  background-color: #2c2c2c;
+  background-color: #1c222e;
 }
 .layout .sidebar .menu.icon-shape-circle .menu-item a .menu-icon {
   border-radius: 50%;
@@ -611,10 +611,10 @@
   background-color: #dee2ec;
 }
 .layout .sidebar.has-bg-image .menu.icon-shape-circle .menu-item a .menu-icon, .layout .sidebar.has-bg-image .menu.icon-shape-rounded .menu-item a .menu-icon, .layout .sidebar.has-bg-image .menu.icon-shape-square .menu-item a .menu-icon {
-  background-color: rgba(44, 44, 44, 0.6);
+  background-color: rgba(28, 34, 46, 0.6);
 }
 .layout .sidebar.has-bg-image:not(.collapsed) .menu > ul > .sub-menu > .sub-menu-list {
-  background-color: rgba(44, 44, 44, 0.6);
+  background-color: rgba(28, 34, 46, 0.6);
 }
 .layout.rtl .sidebar .menu .menu-item a .menu-icon {
   margin-left: 10px;
@@ -687,12 +687,12 @@ body {
 
 button {
   position: relative;
-  background: #454545;
+  background: #242d3c;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
   border: 1px solid black;
-  border-radius: 25px 25px;
+  border-radius: 5px 5px;
   color: white;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -713,8 +713,9 @@ button:after {
 }
 button:hover {
   border-radius: 1px 1px;
-  background: linear-gradient(45deg, #ef0781 0%, #ef0781 6%, #d00a70 6%, #d00a70 25%, #b10d60 25%, #b10d60 40%, #93104f 40%, #93104f 45%, #74133e 45%, #74133e 53%, #55162e 53%, #55162e 66%, #2d3212 66%, #36191d 100%);
+  background: #FFDB58;
   letter-spacing: 0.3em;
+  color: black;
 }
 
 .container-fluid, .container {
@@ -1710,6 +1711,55 @@ button:hover {
     order: 1;
   }
 }
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hamburger {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+#hamburger .line {
+  fill: none;
+  stroke: #FFDB58;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+#hamburger .line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+#hamburger .line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+#hamburger .line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+#hamburger.open .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+#hamburger.open .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+#hamburger.open .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
