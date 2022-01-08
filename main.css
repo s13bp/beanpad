@@ -382,7 +382,6 @@
   padding: 20px;
 }
 .layout .content {
-  padding: 20px;
   display: flex;
   flex-direction: column;
 }
