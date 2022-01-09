@@ -12,6 +12,58 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
     <title>Bean Pad</title>
     <style>
+            
+      .hidden {
+        opacity:0;
+      }
+      .console-container {
+      
+        font-family:Khula;
+        font-size:4em;
+        text-align:center;
+        height:200px;
+        width:600px;
+        display:block;
+        position:absolute;
+        color:white;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        margin:auto;
+      }
+      .console-underscore {
+        display:inline-block;
+        position:relative;
+        top:-0.14em;
+        left:10px;
+      }
+    </style>
+    <style>
+      /* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: relative;
+  object-fit: cover;
+  
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100VH;
+}
+
+/* Add some content at the bottom of the video/page */
+.contentz {
+  position: absolute;
+  
+  top: auto;
+  background: linear-gradient( rgba(0, 0, 0, 0.719),rgba(0, 0, 0, 0.623),rgba(0, 0, 0, 0.61),rgba(0, 0, 0, 0.575),rgba(0, 0, 0, 0.103));
+  color: #f1f1f1;
+  width: 100%;
+  min-height: 100VH;
+  
+  
+}
+    </style>
+    <style>
 
         .boxes{
             
@@ -418,17 +470,35 @@
         
         </header>
         <main class="content" style="background-color:#242d3c; color: #f5f5f5;">
-          <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script><div id="coinmarketcap-widget-marquee" coins="1,1027,825,1839,5426,2010,3408,3890,5805,5994" currency="USD" theme="dark" transparent="true" show-symbol-logo="true" style="padding:0px 0px " ></div>
-          <div class="container-sm center-xs" style="padding-top: 200px;">
-            <h1 >
-              A Launchpad with ZERO Token Supply Fee Options for DeFi. 
+        
 
-            </h1>
-            <p style="padding-left:10%; padding-right:10%;">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, aperiam. Natus molestiae fuga ipsam ipsum. Doloremque dolorem corporis velit excepturi, necessitatibus recusandae rem facere at iste pariatur dicta totam sequi?
-            </p>
+         <video autoplay muted loop id="myVideo">
+            <source src="assets/images/vidoz.mp4" type="video/mp4">
+          </video>
+
+            <!-- Optional: some overlay text to describe the video -->
+         
+          <div class="contentz">
+            <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script><div id="coinmarketcap-widget-marquee" coins="1,1027,825,1839,5426,2010,3408,3890,5805,5994" currency="USD" theme="dark" transparent="false" show-symbol-logo="true" ></div>
+
+              
+                <div class='container-fluid center-sm ' style="padding-top: 20%; font-size: 45px;"><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
+                <p class="center-sm" style="padding-left:10%; padding-right:10%;">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, aperiam. Natus molestiae fuga ipsam ipsum. Doloremque dolorem corporis velit excepturi, necessitatibus recusandae rem facere at iste pariatur dicta totam sequi?
+                </p>
  
            
+
+
+          </div>
+          <div class="container-fluid center-sm">
+            <h1>OTHER PAGE STARTS HERE</h1>
+            <P>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, aperiam. Natus molestiae fuga ipsam ipsum. Doloremque dolorem corporis velit excepturi, necessitatibus recusandae rem facere at iste pariatur dicta totam sequi?
+            </P>
+            <P>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, aperiam. Natus molestiae fuga ipsam ipsum. Doloremque dolorem corporis velit excepturi, necessitatibus recusandae rem facere at iste pariatur dicta totam sequi?
+            </P>
 
 
           </div>
