@@ -379,8 +379,9 @@
 .layout .header {
   display: flex;
   align-items: center;
-  padding: 20px;
-  margin-left: auto;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
 .layout .content {
   display: flex;
@@ -523,12 +524,12 @@
   transition: opacity 0.3s;
 }
 .layout .sidebar .menu .menu-item a:hover .menu-title {
-  color: white;
+  color: #808A9D;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
 }
 .layout .sidebar .menu .menu-item a:hover .menu-icon {
-  color: white;
+  color: #808A9D;
 }
 .layout .sidebar .menu .menu-item a:hover .menu-icon i {
   animation: swing ease-in-out 1s 1 alternate;
