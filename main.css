@@ -520,6 +520,8 @@
 }
 .layout .sidebar .menu .menu-item a:hover .menu-title {
   color: white;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
 }
 .layout .sidebar .menu .menu-item a:hover .menu-icon {
   color: white;
