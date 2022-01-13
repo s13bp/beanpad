@@ -3425,6 +3425,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _libs_slide__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./libs/slide */ "./src/libs/slide.js");
 /* harmony import */ var _libs_constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./libs/constants */ "./src/libs/constants.js");
 /* harmony import */ var _libs_poppers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./libs/poppers */ "./src/libs/poppers.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -3546,6 +3548,45 @@ function consoleText(words, id, colors) {
     }
   }, 400);
 }
+
+var data = [{
+  dateLabel: 'January 2017',
+  title: 'Gathering Information'
+}, {
+  dateLabel: 'February 2017',
+  title: 'Planning'
+}, {
+  dateLabel: 'March 2017',
+  title: 'Design'
+}, {
+  dateLabel: 'April 2017',
+  title: 'Content Writing and Assembly'
+}, {
+  dateLabel: 'May 2017',
+  title: 'Coding'
+}, {
+  dateLabel: 'June 2017',
+  title: 'Testing, Review & Launch'
+}, {
+  dateLabel: 'July 2017',
+  title: 'Maintenance'
+}];
+new Vue({
+  el: '#app',
+  data: {
+    steps: data
+  },
+  mounted: function mounted() {
+    var _Swiper;
+
+    var swiper = new Swiper('.swiper-container', (_Swiper = {
+      //pagination: '.swiper-pagination',
+      slidesPerView: 3,
+      paginationClickable: true,
+      grabCursor: true
+    }, _defineProperty(_Swiper, "paginationClickable", true), _defineProperty(_Swiper, "nextButton", '.next-slide'), _defineProperty(_Swiper, "prevButton", '.prev-slide'), _Swiper));
+  }
+});
 })();
 
 /******/ })()

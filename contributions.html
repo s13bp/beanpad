@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="We hwve come to change the game"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link rel="stylesheet" href="./main.css" />
+  
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
+   
+    <title>Bean Pad</title>
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+    rel = "stylesheet">
+    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="./flip/flip.min.css">
+    <style>
+     h1{ font-family: 'Raleway', sans-serif;
+         font-weight: 700;
+      }
+     h2{font-family: 'Raleway', sans-serif;
+        font-weight: 300;
+      }
+     p {font-family: 'Raleway', sans-serif;
+        font-weight: 100;
+      }
+     button{
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
+
+
+      }
+
+    </style>
+    <style>
+
+    </style>
+   
+    <style>
+            
+      .hidden {
+        opacity:0;
+      }
+      .console-container {
+      
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+       
+      }
+      .console-underscore {
+        display:inline-block;
+        position:relative;
+        top:-0.14em;
+        left:10px;
+      }
+    </style>
+    <style>
+      /* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: relative;
+  object-fit: cover;
+  
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100VH;
+}
+
+/* Add some content at the bottom of the video/page */
+.contentz {
+  position: absolute;
+  
+  top: auto;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.89) 0%, rgba(0, 0, 0, 0.822) 35%, rgba(0, 0, 0, 0.801) 53%, rgba(0, 0, 0, 0.74) 75%, rgba(0,0,0,0) 100%);
+  color: #f1f1f1;
+  width: 100%;
+  min-height: 100VH;
+  
+  
+}
+    </style>
+    <style>
+
+        .boxes{
+            
+            width: 250px;
+            background-color: #1c222e;
+            margin:2px 15px;
+            cursor: pointer; 
+            transition: all 1s;  /* lets make it smooth */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            padding: 10px;
+        }
+
+        .change-bgcolor:hover{
+            background-color: #ffcb0d;
+            transition: all 1s;
+        }
+
+        .change-font-color:hover{
+            transition: all 1s;
+            color:#fff;
+        }
+
+        .move-right:hover{
+            background-color: #FFDB58;
+            transition: all .5s;
+            transform : translateX(10px);
+         
+        }
+
+        .move-left:hover{
+            background-color: #FFDB58;
+            transition: all .5s;
+            transform : translateX(-10px);
+        }
+        .move-up:hover{
+            background-color: crimson;
+            transition: all .5s;
+            transform : translateY(-10px);
+        }
+
+        .move-down:hover{
+            background-color: #FFDB58;
+            transition: all .5s;
+            transform : translateY(10px);
+        }
+
+        .zoom-in:hover{
+            background-color: crimson;
+            transition: all .5s;
+            transform: scale(1.5);
+        }
+
+        .zoom-out:hover{
+            background-color: crimson;
+            transition: all 1s;
+            transform: scale(.5);
+        }
+
+
+        .change-radius:hover{
+            background-color: crimson;
+            transition: all 1s;
+            border-radius: 50%;
+        }
+
+        .expand-left-right:hover{
+            background-color: crimson;
+            transition: all 1s;
+            transform : scaleX(1.5);
+        }
+
+        .expand-up-down:hover{
+            background-color: crimson;
+            transition: all 1s;
+            transform : scaleY(1.5);
+        }
+
+        .rotate-clockwise:hover{
+            background-color: crimson;
+            transition: all 1s;
+            -webkit-transform: rotateZ(30deg);
+                -ms-transform: rotateZ(30deg);
+                transform: rotateZ(30deg);
+        }
+
+        .rotate-anti-clockwise:hover{
+            background-color: crimson;
+            transition: all 1s;
+            -webkit-transform: rotateZ(-30deg);
+                -ms-transform: rotateZ(-30deg);
+                transform: rotateZ(-30deg);
+        }
+
+        .rotate-360-clockwise:hover{
+            background-color: crimson;
+            transition: all 1s;
+            -webkit-transform: rotateZ(360deg);
+                -ms-transform: rotateZ(360deg);
+                transform: rotateZ(360deg);
+        }
+
+        .rotate-360-anticlockwise:hover{
+            background-color: crimson;
+            transition: all 1s;
+            -webkit-transform: rotateZ(-360deg);
+                -ms-transform: rotateZ(-360deg);
+                transform: rotateZ(-360deg);
+        }
+
+        .filip-horizontal:hover{
+            background-color: crimson;
+            transition: all 2s;
+            -webkit-transform: rotateY(-360deg);
+                -ms-transform: rotateY(-360deg);
+                transform: rotateY(-360deg);
+        }
+
+        .filip-horizontal-mirror:hover{
+            background-color: crimson;
+            transition: all 2s;
+            -webkit-transform: rotateY(180deg);
+                -ms-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+        }
+
+        .filip-vertical:hover{
+            background-color: crimson;
+            transition: all 2s;
+            -webkit-transform: rotateX(-360deg);
+                -ms-transform: rotateX(-360deg);
+                transform: rotateX(-360deg);
+        }
+
+        .filip-vertical-mirror:hover{
+            background-color: crimson;
+            transition: all 2s;
+            -webkit-transform: rotateX(180deg);
+                -ms-transform: rotateX(180deg);
+                transform: rotateX(180deg);
+        }
+
+        .inset-box-shadow:hover{
+            background-color: crimson;
+            transition: all 1s;
+            box-shadow: inset 0 0 0 20px #2f2f2f;
+            font-size: 25px;
+        }
+
+        .offset-box-shadow:hover{
+            background-color: crimson;
+            transition: all 1s;
+            box-shadow: 0 0 0 20px #2f2f2f;
+        }
+
+        .smooth-offset-box-shadow:hover{
+            background-color: crimson;
+            transition: all 1s;
+            box-shadow: 0 0 20px 20px #2f2f2f;
+        }
+
+        .smooth-inset-box-shadow:hover{
+            background-color: crimson;
+            transition: all 1s;
+            box-shadow: inset 0 0 20px 20px #2f2f2f;
+        }
+
+        .gradient-color-box{
+            width: 100%;
+            height: 100px;
+            background-image: linear-gradient(to right, lightgreen , darkgreen);
+            transition: all 1s;
+            cursor: pointer;
+            border: 3px solid aqua;
+            color: white;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .gradient-color-box:hover{
+            transition: all 1s;
+            background-image: linear-gradient(to right, darkgreen , lightgreen);
+        }
+
+        .yvanaplaceholder{
+          display: flex;
+          text-align: center;
+          justify-content: center;
+        }
+
+        .yvana{
+          color: darkgreen;
+          text-decoration: none;
+        }
+
+        .name{
+          color: crimson;
+        }
+    </style>
+      
+      <style>
+        .ui-widget-header {
+           background: #122a3a;
+           
+           color: #2f2d47;
+           font-weight: bold;
+           
+        }
+     </style>
+     
+     <script>
+        $(function() {
+           var progressbar = $( "#progressbar-2" );
+           $( "#progressbar-2" ).progressbar({
+              value: 30,
+              max:300
+           });
+           function progress() {
+              var val = progressbar.progressbar( "value" ) || 0;
+              progressbar.progressbar( "value", val + 1 );
+              if ( val < 99 ) {
+                 setTimeout( progress, 100 );
+              }
+           }
+           setTimeout( progress, 3000 );
+        });
+     </script>
+  </head>
+  <body>
+    <div class="layout has-sidebar fixed-sidebar fixed-header">
+      <aside id="sidebar" class="sidebar break-point-lg has-bg-image">
+        <div class="image-wrapper" >
+         
+        </div>
+        <div class="sidebar-layout">
+          <div class="sidebar-header" >
+           
+            <img src="assets/images/nobg.png" style="max-width:120px;"> 
+          </div>
+          <div class="sidebar-content  ">
+            <nav class="menu open-current-submenu ">
+              <ul>
+                <li class="menu-item ">
+                  <a href="index.html" class="boxes  move-right">
+                    <span class="menu-icon">
+                      <i class="ri-home-3-fill"></i>
+                    </span>
+                    <span class="menu-title ">Home</span>
+                  </a>
+                </li>
+                <li class="menu-item sub-menu ">
+                  <a href="#" class=" boxes move-right">
+                    <span class="menu-icon">
+                      <i class="ri-coin-fill"></i>
+                    </span>
+                    <span class="menu-title">Launch Pads</span>
+                   
+                  </a>
+                  <div class="sub-menu-list">
+                    <ul>
+                      <li class="menu-item">
+                        <a href="#" class=" boxes move-left">
+                          <span class="menu-title">Create Launch Pad</span>
+                        </a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="#" class=" boxes move-left">
+                          <span class="menu-title">Create Fair Launch</span>
+                        </a>
+                      </li>
+                      <li class="menu-item ">
+                        <a href="#" class=" boxes move-left">
+                          <span class="menu-title">Create Token</span>
+                        </a>
+                      </li>
+                      <li class="menu-item sub-menu">
+                        <a href="#" class=" boxes move-left">
+                          <span class="menu-title">Launch Pad List</span>
+                        </a>
+                        <div class="sub-menu-list">
+                          <ul>
+                            <li class="menu-item">
+                              <a href="#" class=" boxes move-left">
+                                <span class="menu-title">View Pool</span>
+                              </a>
+                            </li>
+
+                          </ul>
+                        </div>
+                      </li>
+                       
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class=" boxes move-right">
+                    <span class="menu-icon">
+                      <i class="ri-bar-chart-grouped-fill"></i>
+                    </span>
+                    <span class="menu-title">Leaderboard</span>
+                  </a>
+                </li>
+                <li class="menu-item sub-menu">
+                  <a href="#" class=" boxes move-right">
+                    <span class="menu-icon">
+                      <i class="ri-lock-2-fill"></i>
+                    </span>
+                    <span class="menu-title">BeanLock</span>
+                  </a>
+                  <div class="sub-menu-list">
+                    <ul>
+                      <li class="menu-item">
+                        <a href="#" class=" boxes move-left">
+                          <span class="menu-title">Create Lock</span>
+                        </a>
+                      </li>
+                      <li class="menu-item sub-menu">
+                        <a href="#" class=" boxes move-left">
+                          <span class="menu-title ">Token</span>
+                        </a>
+                        <div class="sub-menu-list">
+                          <ul>
+                            <li class="menu-item">
+                              <a href="#" class=" boxes move-left">
+                                <span class="menu-title">Lock info</span>
+                              </a>
+                            </li>
+
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="menu-item sub-menu">
+                        <a href="#" class=" boxes move-left">
+                          <span class="menu-title ">Liquidity</span>
+                        </a>
+                        <div class="sub-menu-list">
+                          <ul>
+                            <li class="menu-item">
+                              <a href="#" class=" boxes move-left">
+                                <span class="menu-title">Liquidity lock info</span>
+                              </a>
+                            </li>
+
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+               
+               
+                <li class="menu-item">
+                  <a href="#" class=" boxes move-right">
+                    <span class="menu-icon">
+                      <i class="ri-robot-fill"></i>
+                    </span>
+                    <span class="menu-title">Bean Anti Bot</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class=" boxes move-right">
+                    <span class="menu-icon">
+                      <i class="ri-alarm-warning-fill"></i>
+                    </span>
+                    <span class="menu-title">Pools Alert</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class=" boxes move-right">
+                    <span class="menu-icon">
+                      <i class="ri-check-double-fill"></i>
+                    </span>
+                    <span class="menu-title">KYC & Audits</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class=" boxes move-right">
+                    <span class="menu-icon">
+                      <i class="ri-article-fill"></i>
+                    </span>
+                    <span class="menu-title">Docs</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class=" boxes move-right">
+                    <span class="menu-icon">
+                      <i class="ri-telegram-fill"></i>
+                    </span>
+                    <span class="menu-title">Telegram</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class=" boxes move-right">
+                    <span class="menu-icon">
+                      <i class="ri-twitter-fill"></i>
+                    </span>
+                    <span class="menu-title">Twitter</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        
+        </div>
+      </aside>
+      <div id="overlay" class="overlay"></div>
+      <div class="layout">
+        <header class="header" style="background-color: #1b222e;">
+          <a id="btn-collapse" href="#">
+            <div id="hamburger" onclick="this.classList.toggle('open');">
+              <svg width="50" height="50" viewBox="0 0 100 100">
+                <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                <path class="line line2" d="M 20,50 H 80" />
+                <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+              </svg>
+            </div>
+          </a>
+          <a id="btn-toggle" href="#" class="sidebar-toggler break-point-lg">
+            <div id="hamburger" onclick="this.classList.toggle('open');">
+              <svg width="70" height="50" viewBox="0 0 100 100">
+                <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                <path class="line line2" d="M 20,50 H 80" />
+                <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+              </svg>
+            </div>
+          </a>
+          <div class="row col-xs-12 end-xs">
+            <button >MY PAD</button>
+            <button >CONNECT</button>
+          </div>
+         
+        
+        </header>
+        <main class="content"  style="background-color:#242d3c; width:100%; color: #f5f5f5;">
+        <br><br><br>
+
+         
+            <!-- Optional: some overlay text to describe the video -->
+        <div class="container-fluid row center-xs " >             
+              <div class=" col-xs-3" style="background-color: #1c222e;">
+                  <style>
+                    .tick {
+                        padding-bottom: 1em;
+                        font-size:1rem;
+                        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+                    }
+                    
+                    .tick-label {
+                        font-size:.375em;
+                        text-align:center;
+                    }
+                
+                    .tick-group {
+                        margin:0 .25em;
+                        text-align:center;
+                    }
+                  </style>
+                
+                  <div class="tick"
+                    data-did-init="handleTickInit">
+                
+                    <div data-repeat="true"
+                        data-layout="horizontal center fit"
+                        data-transform="preset(d, h, m, s) -> delay">
+                
+                        <div class="tick-group">
+                
+                            <div data-key="value"
+                                data-repeat="true"
+                                data-transform="pad(00) -> split -> delay">
+                
+                                <span data-view="flip"></span>
+                
+                            </div>
+                
+                            <span data-key="label"
+                                  data-view="text"
+                                  class="tick-label"></span>
+                
+                        </div>
+                
+                    </div>
+                
+                 </div>
+                    <br>
+                    <div class="tick"
+                      data-did-init="handleTickInit">
+          
+                      <div data-repeat="true"
+                            data-layout="horizontal center fit"
+                            data-transform="preset(d, h, m, s) -> delay">
+                  
+                          <div class="tick-group">
+                  
+                              <div data-key="value"
+                                    data-repeat="true"
+                                    data-transform="pad(00) -> split -> delay">
+                  
+                                  <span data-view="flip"></span>
+                  
+                              </div>
+                  
+                              <span data-key="label"
+                                    data-view="text"
+                                    class="tick-label"></span>
+                  
+                          </div>
+                  
+                      </div>
+                  
+               </div>
+                
+
+          </div>
+              <div class="col-xs-offset-1 center-xs col-xs-5 " style=" padding-bottom: 10px; padding-top: 10px;  background-color: #1c222e; "> 
+                <p>
+                  Make sure the website is beanpad.finance!
+                </p>
+                 <div  id = "progressbar-2"></div>
+
+                 <p>
+                   This pool has ended
+                 </p>
+                 <button>
+                   CLAIM
+                 </button>
+
+              </div>
+
+              <div class="col-xs-offset-1 col-xs-3 row "  style="background-color: #1c222e;">
+                <div class="col-xs-6 start-xs">
+                  <p>
+                    Status
+                  </p>
+                  <p>
+                    Sale Type
+                  </p>
+                  <p>
+                    Minimum Buy
+                  </p>
+                  <p>
+                    Maximum buy
+                  </p>
+
+
+
+
+                </div>
+                <div class="col-xs-6 end-xs">
+                  <p>
+                    Incoming
+                  </p>
+                  <p>
+                    Public
+                  </p>
+                  <p>
+                    0.1 BNB
+                  </p>
+                  <p>
+                    2 BNB
+                  </p>
+
+                </div>
+             
+             
+
+              </div>
+        
+         </div><br>
+
+            <div class="container-fluid" style="background-color: #1c222e; min-width: 90%;" >
+              <h1 class="center-xs" >TIMELINE</h1>
+              <div class="Timeline">
+
+                <svg height="5" width="200">
+                <line x1="0" y1="0" x2="200" y2="0" style="stroke:#004165;stroke-width:5" />
+                Sorry, your browser does not support inline SVG.
+              </svg>
+              
+                <div class="event1">
+                  
+                  <div class="event1Bubble">
+                    <div class="eventTime">
+                      <div class="DayDigit">02</div>
+                      <div class="Day">
+                         Wednesday
+                        <div class="MonthYear">february 2016</div>
+                      </div>
+                    </div>
+                    <div class="eventTitle">Profile Created</div>
+                  </div>
+                  <div class="eventAuthor">by punkmaster</div>
+                  <svg height="20" width="20">
+                     <circle cx="10" cy="11" r="5" fill="#004165" />
+                   </svg>
+                  <div class="time">9 : 27 AM</div>
+                  
+                </div>
+                
+                <svg height="5" width="300">
+                <line x1="0" y1="0" x2="300" y2="0" style="stroke:#004165;stroke-width:5" />
+                Sorry, your browser does not support inline SVG.
+              </svg>
+              
+                <div class="event2">
+                  
+                  <div class="event2Bubble">
+                    <div class="eventTime">
+                      <div class="DayDigit">17</div>
+                      <div class="Day">
+                         Thursday
+                        <div class="MonthYear">April 2016</div>
+                      </div>
+                    </div>
+                    <div class="eventTitle">Phone Interview</div>
+                  </div>
+                  <div class="event2Author">some subtext here</div>
+                    <svg height="20" width="20">
+                  <circle cx="10" cy="11" r="5" fill="#004165" />
+                  </svg>
+                  <div class="time2">1 : 32 PM</div>
+                </div>
+                
+                <svg height="5" width="50">
+                <line x1="0" y1="0" x2="50" y2="0" style="stroke:#004165;stroke-width:5" />
+                Sorry, your browser does not support inline SVG.
+              </svg>
+              
+                <div class="now">
+                  NOW
+                </div>  
+                  
+                
+                <svg height="5" width="150">
+                <line x1="0" y1="0" x2="150" y2="0" style="stroke:rgba(162, 164, 163, 0.37);stroke-width:5" />
+                Sorry, your browser does not support inline SVG.
+              </svg>
+                <div class="event3 futureGray ">
+                  <div class="event1Bubble futureOpacity">
+                    <div class="eventTime">
+                      <div class="DayDigit">05</div>
+                      <div class="Day">
+                         Tuesday
+                        <div class="MonthYear">May 2016</div>
+                      </div>
+                    </div>
+                    <div class="eventTitle">Anticipated Hire</div>
+                  </div>
+                    <svg height="20" width="20">
+                  <circle cx="10" cy="11" r="5" fill="rgba(162, 164, 163, 0.37)" />
+                  </svg>
+                </div>
+              <svg height="5" width="50">
+              <line x1="0" y1="0" x2="50" y2="0" style="stroke:#004165;stroke-width:5" /> 
+              </svg>
+              <svg height="20" width="42">
+              <line x1="1" y1="0" x2="1" y2="20" style="stroke:#004165;stroke-width:2" /> 
+              <circle cx="11" cy="10" r="3" fill="#004165" />  
+              <circle cx="21" cy="10" r="3" fill="#004165" />  
+              <circle cx="31" cy="10" r="3" fill="#004165" />    
+              <line x1="41" y1="0" x2="41" y2="20" style="stroke:#004165;stroke-width:2" /> 
+              </svg>  
+              </div>    
+            </div>
+      <br>
+          <div class="container-fluid" style="background-color: #1c222e; width: 90%;">
+            <div class="container-fluid" style="max-width: 80%; background-color: #1c222e;"> 
+             <h1>
+               SomeCoinName Presale
+             </h1>
+             <p>
+               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto. Neque quisquam id nesciunt quaerat repudiandae consequatur quasi vitae sint magnam est voluptatem ipsam delectus labore facere, beatae, fugiat eveniet.
+             </p>
+            </div>
+            <div class="container-fluid row">
+              <div class="col-xs-6">
+                <p>
+                  Presale Address
+                </p>
+                <p>
+                  Token Name
+                </p>
+                <p>
+                  Token Symbol
+                </p>
+                <p>
+                  Token Decimals
+                </p>
+                <p>
+                  Token Address
+                </p>
+
+              </div>
+
+              <div class="col-xs-6 end-xs">
+                <p>
+                  0x5795CE30Db8424fE492112f56bA7C1B2E041cA7E
+                </p>
+                <p>
+                  BlablaCoin
+                </p>
+                <p>
+                  BBC
+                </p>
+                <p>
+                  18
+                </p>
+                <p>
+                  0x5795CE30Db8424fE492112f56bA7C1B2E041cA7E
+                </p>
+
+              </div>
+
+            </div>
+          </div><br>
+
+            <div class="container-fluid center-xs" style="min-width:90%; background-color: #1c222e; padding-bottom: 10px;">
+              <h1>
+                BEANOMETRICS
+              </h1><br>
+              <div><h2>BAR CHART 1</h2>
+                  <div id="fruit-meter">
+                    <div id="apples">20</div>
+                    <div id="bananas">5</div>
+                    <div id="peaches">10</div>
+                    <div id="cherries">2</div>
+                    <div id="grapes">12</div>
+                  </div>
+                </div>
+                <div><H2>BAR CHART 2</H2>
+                  <div id="fruit-meter">
+                    <div id="grapes">12</div>
+                   
+                    <div id="bananas">5</div>
+                    <div id="peaches">10</div>
+                    <div id="cherries">2</div>
+                    <div id="apples">20</div>
+                   
+                  </div>
+                </div>
+
+
+            </div><br><br>
+            <div class="container-fluid center-xs" style="max-width: 80%;">
+              <h1>COMMENTS SECTION</h1>
+
+            </div>
+
+
+        </main>
+        <div class="overlay"></div>
+      </div>
+    </div>
+      
+<script>
+	function handleTickInit(tick) {
+
+        // Uncomment to set labels to different language ( in this case Dutch )
+        /*
+        var locale = {
+            YEAR_PLURAL: 'Jaren',
+            YEAR_SINGULAR: 'Jaar',
+            MONTH_PLURAL: 'Maanden',
+            MONTH_SINGULAR: 'Maand',
+            WEEK_PLURAL: 'Weken',
+            WEEK_SINGULAR: 'Week',
+            DAY_PLURAL: 'Dagen',
+            DAY_SINGULAR: 'Dag',
+            HOUR_PLURAL: 'Uren',
+            HOUR_SINGULAR: 'Uur',
+            MINUTE_PLURAL: 'Minuten',
+            MINUTE_SINGULAR: 'Minuut',
+            SECOND_PLURAL: 'Seconden',
+            SECOND_SINGULAR: 'Seconde',
+            MILLISECOND_PLURAL: 'Milliseconden',
+            MILLISECOND_SINGULAR: 'Milliseconde'
+        };
+
+        for (var key in locale) {
+            if (!locale.hasOwnProperty(key)) { continue; }
+            tick.setConstant(key, locale[key]);
+        }
+        */
+
+        var nextYear = (new Date()).getFullYear() + 1;
+        
+		Tick.count.down(nextYear + '-07-01').onupdate = function(value) {
+			tick.value = value;
+        };
+
+	}
+</script>
+
+<!-- END OF FLIP EXAMPLE PRESET -->
+
+   <script src="./flip/flip.min.js"></script>
+  </body>
+
+
+  <script src="./main.js"></script>
+</html>
