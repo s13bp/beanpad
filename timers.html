@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="We hwve come to change the game"
+    />
+    <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link rel="stylesheet" href="./main.css" />
+  
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
+   
+    <title>Bean Pad</title>
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+    rel = "stylesheet">
+    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="./flip/flip.min.css">
+    <style>
+     h1{ font-family: 'Raleway', sans-serif;
+         font-weight: 700;
+      }
+     h2{font-family: 'Raleway', sans-serif;
+        font-weight: 300;
+      }
+     p {font-family: 'Raleway', sans-serif;
+        font-weight: 100;
+      }
+     button{
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
+
+
+      }
+
+    </style>
+    <style>
+
+    </style>
+   
+    <style>
+            
+      .hidden {
+        opacity:0;
+      }
+      .console-container {
+      
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+       
+      }
+      .console-underscore {
+        display:inline-block;
+        position:relative;
+        top:-0.14em;
+        left:10px;
+      }
+    </style>
+    <style>
+      /* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: relative;
+  object-fit: cover;
+  
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100VH;
+}
+
+/* Add some content at the bottom of the video/page */
+.contentz {
+  position: absolute;
+  
+  top: auto;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.89) 0%, rgba(0, 0, 0, 0.822) 35%, rgba(0, 0, 0, 0.801) 53%, rgba(0, 0, 0, 0.74) 75%, rgba(0,0,0,0) 100%);
+  color: #f1f1f1;
+  width: 100%;
+  min-height: 100VH;
+  
+  
+}
+    </style>
+    <style>
+
+        .boxes{
+            
+            width: 250px;
+            background-color: #1c222e;
+            margin:2px 15px;
+            cursor: pointer; 
+            transition: all 1s;  /* lets make it smooth */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            padding: 10px;
+        }
+
+        .change-bgcolor:hover{
+            background-color: #ffcb0d;
+            transition: all 1s;
+        }
+
+        .change-font-color:hover{
+            transition: all 1s;
+            color:#fff;
+        }
+
+        .move-right:hover{
+            background-color: #FFDB58;
+            transition: all .5s;
+            transform : translateX(10px);
+         
+        }
+
+        .move-left:hover{
+            background-color: #FFDB58;
+            transition: all .5s;
+            transform : translateX(-10px);
+        }
+        .move-up:hover{
+            background-color: crimson;
+            transition: all .5s;
+            transform : translateY(-10px);
+        }
+
+        .move-down:hover{
+            background-color: #FFDB58;
+            transition: all .5s;
+            transform : translateY(10px);
+        }
+
+        .zoom-in:hover{
+            background-color: crimson;
+            transition: all .5s;
+            transform: scale(1.5);
+        }
+
+        .zoom-out:hover{
+            background-color: crimson;
+            transition: all 1s;
+            transform: scale(.5);
+        }
+
+
+        .change-radius:hover{
+            background-color: crimson;
+            transition: all 1s;
+            border-radius: 50%;
+        }
+
+        .expand-left-right:hover{
+            background-color: crimson;
+            transition: all 1s;
+            transform : scaleX(1.5);
+        }
+
+        .expand-up-down:hover{
+            background-color: crimson;
+            transition: all 1s;
+            transform : scaleY(1.5);
+        }
+
+        .rotate-clockwise:hover{
+            background-color: crimson;
+            transition: all 1s;
+            -webkit-transform: rotateZ(30deg);
+                -ms-transform: rotateZ(30deg);
+                transform: rotateZ(30deg);
+        }
+
+        .rotate-anti-clockwise:hover{
+            background-color: crimson;
+            transition: all 1s;
+            -webkit-transform: rotateZ(-30deg);
+                -ms-transform: rotateZ(-30deg);
+                transform: rotateZ(-30deg);
+        }
+
+        .rotate-360-clockwise:hover{
+            background-color: crimson;
+            transition: all 1s;
+            -webkit-transform: rotateZ(360deg);
+                -ms-transform: rotateZ(360deg);
+                transform: rotateZ(360deg);
+        }
+
+        .rotate-360-anticlockwise:hover{
+            background-color: crimson;
+            transition: all 1s;
+            -webkit-transform: rotateZ(-360deg);
+                -ms-transform: rotateZ(-360deg);
+                transform: rotateZ(-360deg);
+        }
+
+        .filip-horizontal:hover{
+            background-color: crimson;
+            transition: all 2s;
+            -webkit-transform: rotateY(-360deg);
+                -ms-transform: rotateY(-360deg);
+                transform: rotateY(-360deg);
+        }
+
+        .filip-horizontal-mirror:hover{
+            background-color: crimson;
+            transition: all 2s;
+            -webkit-transform: rotateY(180deg);
+                -ms-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+        }
+
+        .filip-vertical:hover{
+            background-color: crimson;
+            transition: all 2s;
+            -webkit-transform: rotateX(-360deg);
+                -ms-transform: rotateX(-360deg);
+                transform: rotateX(-360deg);
+        }
+
+        .filip-vertical-mirror:hover{
+            background-color: crimson;
+            transition: all 2s;
+            -webkit-transform: rotateX(180deg);
+                -ms-transform: rotateX(180deg);
+                transform: rotateX(180deg);
+        }
+
+        .inset-box-shadow:hover{
+            background-color: crimson;
+            transition: all 1s;
+            box-shadow: inset 0 0 0 20px #2f2f2f;
+            font-size: 25px;
+        }
+
+        .offset-box-shadow:hover{
+            background-color: crimson;
+            transition: all 1s;
+            box-shadow: 0 0 0 20px #2f2f2f;
+        }
+
+        .smooth-offset-box-shadow:hover{
+            background-color: crimson;
+            transition: all 1s;
+            box-shadow: 0 0 20px 20px #2f2f2f;
+        }
+
+        .smooth-inset-box-shadow:hover{
+            background-color: crimson;
+            transition: all 1s;
+            box-shadow: inset 0 0 20px 20px #2f2f2f;
+        }
+
+        .gradient-color-box{
+            width: 100%;
+            height: 100px;
+            background-image: linear-gradient(to right, lightgreen , darkgreen);
+            transition: all 1s;
+            cursor: pointer;
+            border: 3px solid aqua;
+            color: white;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .gradient-color-box:hover{
+            transition: all 1s;
+            background-image: linear-gradient(to right, darkgreen , lightgreen);
+        }
+
+        .yvanaplaceholder{
+          display: flex;
+          text-align: center;
+          justify-content: center;
+        }
+
+        .yvana{
+          color: darkgreen;
+          text-decoration: none;
+        }
+
+        .name{
+          color: crimson;
+        }
+    </style>
+      
+      <style>
+        .ui-widget-header {
+           background: #122a3a;
+           
+           color: #2f2d47;
+           font-weight: bold;
+           
+        }
+     </style>
+     <style>
+       /* Play with speed and easing of the animation */
+        /* =========================================== */
+        .digit {
+          display: inline-block;
+          font-size: 100px;
+          color: rgba(0, 0, 0, 0.7);
+          height: 180px;
+          line-height: 1;
+        }
+
+        .time-part-wrapper {
+          display: inline-block;
+          margin-right: 50px;
+          position: relative;
+        }
+        .time-part-wrapper:after {
+          content: ":";
+          display: block;
+          width: 30px;
+          height: 230px;
+          position: absolute;
+          top: 0px;
+          right: -30px;
+          color: rgba(0, 0, 0, 0.7);
+          font-size: 100px;
+          line-height: 0.9;
+        }
+        .time-part-wrapper:nth-child(1):after {
+          content: "d";
+          font-size:50px;
+          top:40px;
+        }
+        .time-part-wrapper:nth-child(2):after {
+          content: "h";
+          font-size:50px;
+          top:40px;
+        }
+        .time-part-wrapper:nth-child(3):after {
+          content: "m";
+          font-size:50px;
+          top:40px;
+        }
+
+        .time-part {
+          width: 70px;
+          text-align: center;
+          height: 100px;
+          overflow: hidden;
+          display: inline-block;
+          margin-left: -5px;
+          box-sizing: border-box;
+        }
+        .time-part .digit-wrapper {
+          animation-timing-function: cubic-bezier(1, 0, 1, 0);
+        }
+        /* COUNTDOWN FOR 3 days */
+        /* Issue: 
+        if we start from 24 hours to count down, then we can only use "0,1,2,3,4" for the hour-ones
+        we use 30 hours instead to get all digits 0-9
+        */
+        .time-part.days.tens .digit-wrapper {
+          animation-name: days-tens;
+          animation-duration: 2592000s; /* in 2592000 s → 3 digits get animated = 864000 s/digit = 240 h/digit = 10 days/digit */
+          animation-iteration-count: 2; /* Play the animation 2 times */
+        }
+        .time-part.days.ones .digit-wrapper {
+          animation-name: days-ones;
+          animation-duration: 360000s; /* in 360000 s → 10 digits get animated  = 36000 s/digit = 10 h/digit */
+          animation-iteration-count: 30; /* 2592000 / 86400 */
+        }
+        .time-part.hours.tens .digit-wrapper {
+          animation-name: hours-tens;
+          animation-duration: 108000s; /* in 108000 s → 3 digits get animated = 36000 s/digit = 600 min/digit */
+          animation-iteration-count: 72; /* 2592000 / 36000 */
+        }
+        .time-part.hours.ones .digit-wrapper {
+          animation-name: hours-ones;
+          animation-duration: 36000s; /* in 36000 s → 10 digits get animated  = 3600 s/digit = 60 min/digit */
+          animation-iteration-count: 720;
+        }
+        .time-part.minutes.tens .digit-wrapper {
+          animation-name: minutes-tens;
+          animation-duration: 3600s; /* in 3600 seconds → 6 digits get animated  = 600 s/digit = 10 min/digit */
+          animation-iteration-count: 4320;
+        }
+        .time-part.minutes.ones .digit-wrapper {
+          animation-name: minutes-ones;
+          animation-duration: 600s; /* in 600 seconds → 10 digits get animated = 60 s/digit = 1 min/digit */
+          animation-iteration-count: 43200;
+        }
+
+        @keyframes days-tens {
+          0% {
+            transform: translateY(-180px);
+          }
+          16.66667% {
+            transform: translateY(-360px);
+          }
+          33.33333% {
+            transform: translateY(-540px);
+          }
+          50% {
+            transform: translateY(-720px);
+          }
+          66.66667% {
+            transform: translateY(-900px);
+          }
+          83.33333% {
+            transform: translateY(-1080px);
+          }
+        }
+        @keyframes days-ones {
+          0% {
+            transform: translateY(-180px);
+          }
+          10% {
+            transform: translateY(-360px);
+          }
+          20% {
+            transform: translateY(-540px);
+          }
+          30% {
+            transform: translateY(-720px);
+          }
+          40% {
+            transform: translateY(-900px);
+          }
+          50% {
+            transform: translateY(-1080px);
+          }
+          60% {
+            transform: translateY(-1260px);
+          }
+          70% {
+            transform: translateY(-1440px);
+          }
+          80% {
+            transform: translateY(-1620px);
+          }
+          90% {
+            transform: translateY(-1800px);
+          }
+        }
+        @keyframes hours-tens {
+          0% {
+            transform: translateY(-180px);
+          }
+          16.66667% {
+            transform: translateY(-360px);
+          }
+          33.33333% {
+            transform: translateY(-540px);
+          }
+          50% {
+            transform: translateY(-720px);
+          }
+          66.66667% {
+            transform: translateY(-900px);
+          }
+          83.33333% {
+            transform: translateY(-1080px);
+          }
+        }
+        @keyframes hours-ones {
+          0% {
+            transform: translateY(-180px);
+          }
+          10% {
+            transform: translateY(-360px);
+          }
+          20% {
+            transform: translateY(-540px);
+          }
+          30% {
+            transform: translateY(-720px);
+          }
+          40% {
+            transform: translateY(-900px);
+          }
+          50% {
+            transform: translateY(-1080px);
+          }
+          60% {
+            transform: translateY(-1260px);
+          }
+          70% {
+            transform: translateY(-1440px);
+          }
+          80% {
+            transform: translateY(-1620px);
+          }
+          90% {
+            transform: translateY(-1800px);
+          }
+        }
+        @keyframes minutes-tens {
+          0% {
+            transform: translateY(-180px);
+          }
+          10% {
+            transform: translateY(-360px);
+          }
+          20% {
+            transform: translateY(-540px);
+          }
+          30% {
+            transform: translateY(-720px);
+          }
+          40% {
+            transform: translateY(-900px);
+          }
+          50% {
+            transform: translateY(-1080px);
+          }
+          60% {
+            transform: translateY(-1260px);
+          }
+          70% {
+            transform: translateY(-1440px);
+          }
+          80% {
+            transform: translateY(-1620px);
+          }
+          90% {
+            transform: translateY(-1800px);
+          }
+        }
+        @keyframes minutes-ones {
+          0% {
+            transform: translateY(-180px);
+          }
+          10% {
+            transform: translateY(-360px);
+          }
+          20% {
+            transform: translateY(-540px);
+          }
+          30% {
+            transform: translateY(-720px);
+          }
+          40% {
+            transform: translateY(-900px);
+          }
+          50% {
+            transform: translateY(-1080px);
+          }
+          60% {
+            transform: translateY(-1260px);
+          }
+          70% {
+            transform: translateY(-1440px);
+          }
+          80% {
+            transform: translateY(-1620px);
+          }
+          90% {
+            transform: translateY(-1800px);
+          }
+        }
+        body {
+          background: #87b2ff;
+          margin: 0;
+          font-family: "Aldrich";
+        }
+
+        .wrapper {
+          margin: 30px auto;
+          width: 600px;
+          position: relative;
+        }
+        .wrapper:before, .wrapper:after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 100%;
+          left: 0;
+          height: 20px;
+          z-index: 10;
+        }
+        .wrapper:before {
+          top: 0px;
+
+        }
+        .wrapper:after {
+          bottom: 0px;
+        }
+
+     </style>
+     <style>
+       .container {
+        margin-top: 50px;
+        width: 50%;
+        padding: 10px;
+      }
+      .counter .title {
+          color: #dd7700;
+          font-size: 16px;
+          font-size: 1.6rem;
+          text-transform: uppercase;
+          display: block;
+          margin-bottom: 15px;
+          font-family: 'Raleway', sans-serif;
+          font-weight: 500;
+      }
+      .counter .sq {
+          color: #dd7700;
+          display: inline-block;
+          text-align: center;
+      }
+      .counter .sq .bord {
+          border: 1px solid #dd7700;
+          padding: 12px 15px;
+          margin-right: 18px;
+          text-indent: 0px;
+          font-family: 'Helvetica';
+          font-size: 22px;
+          font-size: 2.2rem;
+          margin-bottom: 5px;
+          width: 74px;
+      }
+      .counter .sq span {
+          clear: both;
+          display: block;
+          text-indent: -15px;
+          font-size: 16px;
+          font-size: 1.6rem;
+          font-family: "Helvetica";
+      }
+      .well {
+       
+      }
+     </style>
+     <style>
+       .image { 
+        position: relative; 
+        width: 100%; /* for IE 6 */
+        }
+
+        h2 { 
+         
+          width: 100%; 
+        }
+        h2 span { 
+          color: white; 
+          font: bold 24px/45px Helvetica, Sans-Serif; 
+          letter-spacing: -1px;  
+          background: rgb(0, 0, 0); /* fallback color */
+          background: rgba(0, 0, 0, 0.7);
+          padding: 10px; 
+        }
+
+        h2 span.spacer {
+          padding:0 5px;
+        }
+     </style>
+     <style>
+       #countdownTimer {
+          padding: 20px 10px 20px 10px;
+         
+        }
+
+     </style>
+     
+     <script>
+        $(function() {
+           var progressbar = $( "#progressbar-2" );
+           $( "#progressbar-2" ).progressbar({
+              value: 30,
+              max:300
+           });
+           function progress() {
+              var val = progressbar.progressbar( "value" ) || 0;
+              progressbar.progressbar( "value", val + 1 );
+              if ( val < 99 ) {
+                 setTimeout( progress, 100 );
+              }
+           }
+           setTimeout( progress, 3000 );
+        });
+     </script>
+  </head>
+  <body>
+    <div class="layout has-sidebar fixed-sidebar fixed-header">
+      <aside id="sidebar" class="sidebar break-point-lg has-bg-image">
+        <div class="image-wrapper" >
+         
+        </div>
+        <div class="sidebar-layout">
+          <div class="sidebar-header" >
+           
+            <img src="assets/images/nobg.png" style="max-width:120px;"> 
+          </div>
+          <div class="sidebar-content  ">
+            <nav class="menu open-current-submenu ">
+              <ul>
+                <li class="menu-item ">
+                  <a href="index.html" class="boxes  move-right">
+                    <span class="menu-icon">
+                      <i class="ri-home-3-fill"></i>
+                    </span>
+                    <span class="menu-title ">Home</span>
+                  </a>
+                </li>
+                <li class="menu-item sub-menu ">
+                  <a href="#" class=" boxes move-right">
+                    <span class="menu-icon">
+                      <i class="ri-coin-fill"></i>
+                    </span>
+                    <span class="menu-title">Launch Pads</span>
+                   
+                  </a>
+                  <div class="sub-menu-list">
+                    <ul>
+                      <li class="menu-item">
+                        <a href="#" class=" boxes move-left">
+                          <span class="menu-title">Create Launch Pad</span>
+                        </a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="#" class=" boxes move-left">
+                          <span class="menu-title">Create Fair Launch</span>
+                        </a>
+                      </li>
+                      <li class="menu-item ">
+                        <a href="#" class=" boxes move-left">
+                          <span class="menu-title">Create Token</span>
+                        </a>
+                      </li>
+                      <li class="menu-item sub-menu">
+                        <a href="#" class=" boxes move-left">
+                          <span class="menu-title">Launch Pad List</span>
+                        </a>
+                        <div class="sub-menu-list">
+                          <ul>
+                            <li class="menu-item">
+                              <a href="#" class=" boxes move-left">
+                                <span class="menu-title">View Pool</span>
+                              </a>
+                            </li>
+
+                          </ul>
+                        </div>
+                      </li>
+                       
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class=" boxes move-right">
+                    <span class="menu-icon">
+                      <i class="ri-bar-chart-grouped-fill"></i>
+                    </span>
+                    <span class="menu-title">Leaderboard</span>
+                  </a>
+                </li>
+                <li class="menu-item sub-menu">
+                  <a href="#" class=" boxes move-right">
+                    <span class="menu-icon">
+                      <i class="ri-lock-2-fill"></i>
+                    </span>
+                    <span class="menu-title">BeanLock</span>
+                  </a>
+                  <div class="sub-menu-list">
+                    <ul>
+                      <li class="menu-item">
+                        <a href="#" class=" boxes move-left">
+                          <span class="menu-title">Create Lock</span>
+                        </a>
+                      </li>
+                      <li class="menu-item sub-menu">
+                        <a href="#" class=" boxes move-left">
+                          <span class="menu-title ">Token</span>
+                        </a>
+                        <div class="sub-menu-list">
+                          <ul>
+                            <li class="menu-item">
+                              <a href="#" class=" boxes move-left">
+                                <span class="menu-title">Lock info</span>
+                              </a>
+                            </li>
+
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="menu-item sub-menu">
+                        <a href="#" class=" boxes move-left">
+                          <span class="menu-title ">Liquidity</span>
+                        </a>
+                        <div class="sub-menu-list">
+                          <ul>
+                            <li class="menu-item">
+                              <a href="#" class=" boxes move-left">
+                                <span class="menu-title">Liquidity lock info</span>
+                              </a>
+                            </li>
+
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+               
+               
+                <li class="menu-item">
+                  <a href="#" class=" boxes move-right">
+                    <span class="menu-icon">
+                      <i class="ri-robot-fill"></i>
+                    </span>
+                    <span class="menu-title">Bean Anti Bot</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class=" boxes move-right">
+                    <span class="menu-icon">
+                      <i class="ri-alarm-warning-fill"></i>
+                    </span>
+                    <span class="menu-title">Pools Alert</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class=" boxes move-right">
+                    <span class="menu-icon">
+                      <i class="ri-check-double-fill"></i>
+                    </span>
+                    <span class="menu-title">KYC & Audits</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class=" boxes move-right">
+                    <span class="menu-icon">
+                      <i class="ri-article-fill"></i>
+                    </span>
+                    <span class="menu-title">Docs</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class=" boxes move-right">
+                    <span class="menu-icon">
+                      <i class="ri-telegram-fill"></i>
+                    </span>
+                    <span class="menu-title">Telegram</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class=" boxes move-right">
+                    <span class="menu-icon">
+                      <i class="ri-twitter-fill"></i>
+                    </span>
+                    <span class="menu-title">Twitter</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        
+        </div>
+      </aside>
+      <div id="overlay" class="overlay"></div>
+      <div class="layout">
+        <header class="header" style="background-color: #1b222e;">
+          <a id="btn-collapse" href="#">
+            <div id="hamburger" onclick="this.classList.toggle('open');">
+              <svg width="50" height="50" viewBox="0 0 100 100">
+                <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                <path class="line line2" d="M 20,50 H 80" />
+                <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+              </svg>
+            </div>
+          </a>
+          <a id="btn-toggle" href="#" class="sidebar-toggler break-point-lg">
+            <div id="hamburger" onclick="this.classList.toggle('open');">
+              <svg width="70" height="50" viewBox="0 0 100 100">
+                <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                <path class="line line2" d="M 20,50 H 80" />
+                <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+              </svg>
+            </div>
+          </a>
+          <div class="row col-xs-12 end-xs">
+            <button >MY PAD</button>
+            <button >CONNECT</button>
+          </div>
+         
+        
+        </header>
+        <main class="content"  style="background-color:#242d3c; width:100%; color: #f5f5f5;">
+        <br><br><br>
+
+         
+            <!-- Optional: some overlay text to describe the video -->
+      
+
+            <div class="container-fluid" style="background-color: #1c222e; min-width: 90%;" >
+                            
+              <div class="wrapper">
+                <div class="time-part-wrapper">
+                  <div class="time-part days tens">
+                    <div class="digit-wrapper">
+                      <span class="digit">0</span>
+                      <span class="digit">2</span>
+                      <span class="digit">1</span>
+                      <span class="digit">0</span>
+                    </div>
+                  </div>
+                  <div class="time-part days ones">
+                    <div class="digit-wrapper">
+                      <span class="digit">0</span>
+                      <span class="digit">9</span>
+                      <span class="digit">8</span>
+                      <span class="digit">7</span>
+                      <span class="digit">6</span>
+                      <span class="digit">5</span>
+                      <span class="digit">4</span>
+                      <span class="digit">3</span>
+                      <span class="digit">2</span>
+                      <span class="digit">1</span>
+                      <span class="digit">0</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="time-part-wrapper">
+                  <div class="time-part hours tens">
+                    <div class="digit-wrapper">
+                      <span class="digit">0</span>
+                      <span class="digit">2</span>
+                      <span class="digit">1</span>
+                      <span class="digit">0</span>
+                    </div>
+                  </div>
+                  <div class="time-part hours ones">
+                    <div class="digit-wrapper">
+                      <span class="digit">0</span>
+                      <span class="digit">9</span>
+                      <span class="digit">8</span>
+                      <span class="digit">7</span>
+                      <span class="digit">6</span>
+                      <span class="digit">5</span>
+                      <span class="digit">4</span>
+                      <span class="digit">3</span>
+                      <span class="digit">2</span>
+                      <span class="digit">1</span>
+                      <span class="digit">0</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="time-part-wrapper">
+                  <div class="time-part minutes tens">
+                    <div class="digit-wrapper">
+                      <span class="digit">0</span>
+                      <span class="digit">5</span>
+                      <span class="digit">4</span>
+                      <span class="digit">3</span>
+                      <span class="digit">2</span>
+                      <span class="digit">1</span>
+                      <span class="digit">0</span>
+                    </div>
+                  </div>
+                  <div class="time-part minutes ones">
+                    <div class="digit-wrapper">
+                      <span class="digit">0</span>
+                      <span class="digit">9</span>
+                      <span class="digit">8</span>
+                      <span class="digit">7</span>
+                      <span class="digit">6</span>
+                      <span class="digit">5</span>
+                      <span class="digit">4</span>
+                      <span class="digit">3</span>
+                      <span class="digit">2</span>
+                      <span class="digit">1</span>
+                      <span class="digit">0</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+      <br>
+
+      
+      <div class="container-fluid center-xs" style="background-color: #1c222e; min-width: 90%;" >
+       
+          <div class="well">
+          
+          
+          <div class="counter" id="clockdiv">
+             <span class="title">Next Showing</span>
+             <div class="sq">
+                <span class="days bord">1</span> <span class="smalltext">Days</span>
+             </div>
+             <div class="sq">
+                <span class="hours bord">22</span> <span class="smalltext">Hours</span>
+             </div>
+             <div class="sq">
+                <span class="minutes bord">40</span> <span class="smalltext">Mins</span>
+             </div>
+             <div class="sq">
+                <span class="seconds bord">45</span> <span class="smalltext">Secs</span>
+             </div>
+          </div>
+          
+          
+          
+          </div>
+          
+          
+      
+      </div><br>
+        <div class="container-fluid center-xs" style="background-color: #1c222e; min-width: 90%;" >
+        
+
+          
+            
+          <h2>Time Left: <span id="timeLeft"></span></h2>
+      
+      
+        
+        </div><br>
+        <div class="container-fluid center-xs" style="background-color: #1c222e; min-width: 90%;" >
+          <div id="countdownTimer"></div>
+        
+         </div>
+
+
+
+        </main>
+        <div class="overlay"></div>
+      </div>
+    </div>
+      
+<script>
+function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  if (t<0) { return false; }
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var daysSpan = clock.querySelector('.days');
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+    if (t) {
+      daysSpan.innerHTML = t.days;
+      hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+      minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+      secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+    } else {
+      clearInterval(timeinterval);
+    }
+  }
+ 
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+var deadline = new Date(); //today
+deadline.setDate(deadline.getDate() + 7);
+initializeClock('clockdiv', deadline);
+</script>
+<script>
+         function updateTimeSpan() {
+      var theSpan = document.getElementById('timeLeft');
+      var d = new Date();
+      var t = new Date();
+      var ms;
+      var s, m, h;
+
+      // if it's after 5pm, set today to tomorrow    
+      if (d.getHours() > 16){ d.setDate(d.getDate() + 1); }
+      // get the next monday    
+      while (d.getDay() != 1){ d.setDate(d.getDate() + 1); }
+      // set the time    
+      d.setHours(23);
+      d.setMinutes(18);
+      d.setSeconds(0);
+      // get the difference between right now and next monday    
+      ms = d - t;
+      // get the days between now and then    
+      d = parseInt(ms / (1000 * 60 * 60 * 24));
+      ms -= (d * 1000 * 60 * 60 * 24);
+      // get hours    
+      h = parseInt(ms / (1000 * 60 * 60));
+      ms -= (h * 1000 * 60 * 60);
+      // get minutes    
+      m = parseInt(ms / (1000 * 60));
+      ms -= (m * 1000 * 60);
+      // get seconds    
+      s = parseInt(ms / 1000);
+      theSpan.innerHTML = d + ' days, ' + h + ' hours, ' + m + ' minutes, and ' + s + ' seconds.';
+      setTimeout('updateTimeSpan()', 100);
+  }
+
+  onload = updateTimeSpan();
+
+  $(function() {
+      
+      $("h2")
+          .wrapInner("<span>")
+
+      $("h2 br")
+          .before("<span class='spacer'>")
+          .after("<span class='spacer'>");
+
+  });
+    
+</script>
+<script>
+  // JavaScript Document
+if (document.getElementById('countdownTimer')) {
+  pad = function(n, len) { // leading 0's
+    var s = n.toString();
+    return (new Array((len - s.length + 1)).join('0')) + s;
+  };
+
+  var timerRunning = setInterval(
+    function countDown() {
+      var now = new Date();
+      if ((now.getDay() >= 1) && (now.getDay() <= 7)) { // Monday to Friday only
+        var target = 17; // 15:00hrs is the cut-off point -------- Trying to get 6pm EST regardless of user time zone
+        if (now.getHours() < target) { // would be best if could hide the whole counter if past cutoff point each day
+        	var arr_parts = [];
+          var hrs = (target - 1) - now.getHours();
+          var mins = 59 - now.getMinutes();
+          var secs = 59 - now.getSeconds();
+          
+          if ( hrs ) {
+          	arr_parts.push( hrs );
+          }
+          if( mins ) {
+          	arr_parts.push( pad( mins, 2 ) );
+          }
+          if ( secs ) {
+          	arr_parts.push( pad( secs, 2 ) );
+          }
+          
+          // number of parts to the countdown 
+          // 3 = h:m:s
+          // 2 = m:s
+          // 1 = s
+          part_length = arr_parts.length;
+          
+          // the biggest unit for the countdown 
+          // so length of 1 means we need seconds at index 0)
+          arr_units = [ 'seconds', 'minutes', 'hours' ]
+          str_unit = arr_units[ part_length - 1 ];
+          
+          var str = 'Order within the next <strong>' 
+          	+ arr_parts.join( ':' ) 
+            + ' ' + str_unit
+            + '</strong> to ship <strong>today</strong>.';
+          document.getElementById('countdownTimer').innerHTML = str;
+        }
+      }
+    }, 1000
+  );
+}
+
+</script>
+
+<!-- END OF FLIP EXAMPLE PRESET -->
+
+   <script src="./flip/flip.min.js"></script>
+  </body>
+
+
+  <script src="./main.js"></script>
+</html>
